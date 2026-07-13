@@ -1,0 +1,16 @@
+name: Config Sync
+
+# Sincroniza os values do contrato pro repo gitops-<app> quando o dev dá push.
+on:
+  push:
+    branches: [main]
+    paths:
+      - tools/microsservico/**
+
+jobs:
+  config-sync:
+    permissions:
+      contents: read
+    uses: TourinhoM/org-ci-platform/.github/workflows/config-sync-helm.yml@main
+    secrets:
+      RELEASE_APP_PRIVATE_KEY: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}

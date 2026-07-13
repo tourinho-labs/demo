@@ -1,0 +1,34 @@
+# Gerado pelo scaffolder; edite só o que precisar.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: demo
+  description: demo
+  annotations:
+    github.com/project-slug: tourinho-labs/demo
+    backstage.io/techdocs-ref: dir:.
+    backstage.io/kubernetes-id: demo
+    argocd/app-selector: app=demo
+    kyverno.io/namespace: demo
+    kyverno.io/kind: Deployment,Pod
+    kyverno.io/resource-name: demo
+  tags:
+    - nodejs
+    - fastify
+    - kubernetes
+  links:
+    - url: https://github.com/tourinho-labs/demo
+      title: Repositório
+      icon: github
+spec:
+  type: service
+  lifecycle: experimental
+  owner: user:default/tourinhom
+  system: platform-lab
+  dependsOn:
+    - resource:default/policy-reporter
+  # Descomente e aponte relações quando existirem.
+  # dependsOn:
+  #   - resource:postgresql
+  # providesApis:
+  #   - minha-api
