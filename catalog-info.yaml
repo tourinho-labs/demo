@@ -22,9 +22,6 @@ metadata:
     - url: https://github.com/tourinho-labs/demo
       title: Repositório
       icon: github
-    - url: https://grafana.local/d/app-overview-golden-path/app-overview-golden-path?var-namespace=demo-dev
-      title: Dashboard (dev)
-      icon: dashboard
 spec:
   type: service
   lifecycle: experimental
