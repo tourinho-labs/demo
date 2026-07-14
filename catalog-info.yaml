@@ -12,6 +12,8 @@ metadata:
     kyverno.io/namespace: demo
     kyverno.io/kind: Deployment,Pod
     kyverno.io/resource-name: demo
+    grafana/dashboard-selector: "tags @> 'app-overview'"
+    grafana/tag-selector: app-overview
   tags:
     - nodejs
     - fastify
@@ -20,6 +22,9 @@ metadata:
     - url: https://github.com/tourinho-labs/demo
       title: Repositório
       icon: github
+    - url: https://grafana.local/d/app-overview-golden-path/app-overview-golden-path?var-namespace=demo-dev
+      title: Dashboard (dev)
+      icon: dashboard
 spec:
   type: service
   lifecycle: experimental
