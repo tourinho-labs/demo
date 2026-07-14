@@ -12,7 +12,7 @@ metadata:
     kyverno.io/namespace: demo
     kyverno.io/kind: Deployment,Pod
     kyverno.io/resource-name: demo
-    grafana/dashboard-selector: app-overview
+    grafana/overview-dashboard: https://grafana.local/d/app-overview-golden-path/app-overview-golden-path?var-namespace=demo-dev&kiosk
     grafana/alert-label-selector: namespace=demo-dev
   tags:
     - nodejs
