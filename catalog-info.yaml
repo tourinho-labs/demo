@@ -12,8 +12,7 @@ metadata:
     kyverno.io/namespace: demo
     kyverno.io/kind: Deployment,Pod
     kyverno.io/resource-name: demo
-    grafana/dashboard-selector: "tags @> 'app-overview'"
-    grafana/tag-selector: app-overview
+    grafana/dashboard-selector: app-overview
   tags:
     - nodejs
     - fastify
