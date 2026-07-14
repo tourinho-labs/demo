@@ -13,6 +13,7 @@ metadata:
     kyverno.io/kind: Deployment,Pod
     kyverno.io/resource-name: demo
     grafana/dashboard-selector: app-overview
+    grafana/alert-label-selector: namespace=demo-dev
   tags:
     - nodejs
     - fastify
